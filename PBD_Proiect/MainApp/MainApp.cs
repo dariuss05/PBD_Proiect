@@ -1,13 +1,8 @@
 ﻿using PBD_Proiect.Displays;
 using PBD_Proiect.MainApps;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace PBD_Proiect
@@ -17,6 +12,36 @@ namespace PBD_Proiect
         public MainApp()
         {
             InitializeComponent();
+        }
+
+        private void MainApp_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                String databaseConnection = @"Data Source=DESKTOP-E4UMHMU\SQLEXPRESS;Initial Catalog=Students;Integrated Security=True";
+                SqlConnection sqlConnection = new SqlConnection(databaseConnection);
+                sqlConnection.Open();
+
+                String selectQuery = "SELECT * FROM student";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, databaseConnection);
+                DataSet dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "student");
+                tabelStudenti.DataSource = dataSet.Tables["student"].DefaultView;
+
+                selectQuery = "SELECT * from note";
+                dataAdapter = new SqlDataAdapter(selectQuery, databaseConnection);
+                dataSet = new DataSet();
+                dataAdapter.Fill(dataSet, "note");
+                tabelNote.DataSource = dataSet.Tables["note"].DefaultView;
+
+
+                dataAdapter.Dispose();
+                dataSet.Dispose();
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show("EROARE", exception.Message);
+            }
         }
 
         private void iesireMenu_Click(object sender, EventArgs e)
@@ -71,5 +96,6 @@ namespace PBD_Proiect
             var displayPrezentariExamen = new DisplayPrezentariExamenStudent();
             displayPrezentariExamen.Show();
         }
+
     }
 }

@@ -40,19 +40,29 @@
             this.restanteConsecutiveMenuAfisare = new System.Windows.Forms.ToolStripMenuItem();
             this.prezentariExamenMenuAfisare = new System.Windows.Forms.ToolStripMenuItem();
             this.iesireMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabelStudenti = new System.Windows.Forms.DataGridView();
+            this.tabelNote = new System.Windows.Forms.DataGridView();
+            this.lblTabelNote = new System.Windows.Forms.Label();
+            this.lblStudenti = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelStudenti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelNote)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.restantieriMenuAfisare,
             this.iesireMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(169, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -141,18 +151,77 @@
             this.iesireMenu.Text = "Ieșire";
             this.iesireMenu.Click += new System.EventHandler(this.iesireMenu_Click);
             // 
+            // tabelStudenti
+            // 
+            this.tabelStudenti.AllowUserToAddRows = false;
+            this.tabelStudenti.AllowUserToDeleteRows = false;
+            this.tabelStudenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabelStudenti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabelStudenti.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tabelStudenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelStudenti.Location = new System.Drawing.Point(22, 69);
+            this.tabelStudenti.Name = "tabelStudenti";
+            this.tabelStudenti.ReadOnly = true;
+            this.tabelStudenti.Size = new System.Drawing.Size(1369, 333);
+            this.tabelStudenti.TabIndex = 1;
+            // 
+            // tabelNote
+            // 
+            this.tabelNote.AllowUserToAddRows = false;
+            this.tabelNote.AllowUserToDeleteRows = false;
+            this.tabelNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabelNote.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tabelNote.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tabelNote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelNote.Location = new System.Drawing.Point(22, 438);
+            this.tabelNote.Name = "tabelNote";
+            this.tabelNote.ReadOnly = true;
+            this.tabelNote.Size = new System.Drawing.Size(1369, 331);
+            this.tabelNote.TabIndex = 2;
+            // 
+            // lblTabelNote
+            // 
+            this.lblTabelNote.AutoSize = true;
+            this.lblTabelNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblTabelNote.Location = new System.Drawing.Point(633, 414);
+            this.lblTabelNote.Name = "lblTabelNote";
+            this.lblTabelNote.Size = new System.Drawing.Size(84, 18);
+            this.lblTabelNote.TabIndex = 3;
+            this.lblTabelNote.Text = "Tabel Note:";
+            // 
+            // lblStudenti
+            // 
+            this.lblStudenti.AutoSize = true;
+            this.lblStudenti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblStudenti.Location = new System.Drawing.Point(633, 38);
+            this.lblStudenti.Name = "lblStudenti";
+            this.lblStudenti.Size = new System.Drawing.Size(105, 18);
+            this.lblStudenti.TabIndex = 4;
+            this.lblStudenti.Text = "Tabel Studenti:";
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1403, 781);
+            this.Controls.Add(this.lblStudenti);
+            this.Controls.Add(this.lblTabelNote);
+            this.Controls.Add(this.tabelNote);
+            this.Controls.Add(this.tabelStudenti);
             this.Controls.Add(this.menuStrip1);
             this.MaximizeBox = false;
             this.Name = "MainApp";
             this.Text = "MainApp";
+            this.Load += new System.EventHandler(this.MainApp_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelStudenti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelNote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +241,10 @@
         private System.Windows.Forms.ToolStripMenuItem studentMenuAdd;
         private System.Windows.Forms.ToolStripMenuItem notaMenuAdd;
         private System.Windows.Forms.ToolStripMenuItem iesireMenu;
+        private System.Windows.Forms.DataGridView tabelStudenti;
+        private System.Windows.Forms.DataGridView tabelNote;
+        private System.Windows.Forms.Label lblTabelNote;
+        private System.Windows.Forms.Label lblStudenti;
     }
 }
 
