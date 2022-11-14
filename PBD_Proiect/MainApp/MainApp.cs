@@ -1,4 +1,5 @@
 ﻿using PBD_Proiect.Displays;
+using PBD_Proiect.LoginApp;
 using PBD_Proiect.MainApps;
 using System;
 using System.Data;
@@ -18,18 +19,17 @@ namespace PBD_Proiect
         {
             try
             {
-                String databaseConnection = @"Data Source=DESKTOP-E4UMHMU\SQLEXPRESS;Initial Catalog=Students;Integrated Security=True";
-                SqlConnection sqlConnection = new SqlConnection(databaseConnection);
+                SqlConnection sqlConnection = new SqlConnection(DatabaseConnection.databaseConnectionString);
                 sqlConnection.Open();
 
                 String selectQuery = "SELECT * FROM student";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, databaseConnection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, DatabaseConnection.databaseConnectionString);
                 DataSet dataSet = new DataSet();
                 dataAdapter.Fill(dataSet, "student");
                 tabelStudenti.DataSource = dataSet.Tables["student"].DefaultView;
 
                 selectQuery = "SELECT * from note";
-                dataAdapter = new SqlDataAdapter(selectQuery, databaseConnection);
+                dataAdapter = new SqlDataAdapter(selectQuery, DatabaseConnection.databaseConnectionString);
                 dataSet = new DataSet();
                 dataAdapter.Fill(dataSet, "note");
                 tabelNote.DataSource = dataSet.Tables["note"].DefaultView;

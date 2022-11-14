@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBD_Proiect.LoginApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,6 @@ namespace PBD_Proiect
         {
             InitializeComponent();
         }
-        // @"Data Source=DESKTOP-E4UMHMU\SQLEXPRESS;Initial Catalog=Students;Integrated Security=True";
         private void btnSignUP_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == String.Empty)
@@ -30,8 +30,7 @@ namespace PBD_Proiect
             }
             else
             {
-                String databaseConnection = @"Data Source=DESKTOP-E4UMHMU\SQLEXPRESS;Initial Catalog=Students;Integrated Security=True";
-                SqlConnection sqlConnection = new SqlConnection(databaseConnection);
+                SqlConnection sqlConnection = new SqlConnection(DatabaseConnection.databaseConnectionString);
 
                 sqlConnection.Open();
 

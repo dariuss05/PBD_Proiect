@@ -82,6 +82,7 @@
     <Compile Include="Displays\DisplayRestantieri.Designer.cs">
       <DependentUpon>DisplayRestantieri.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginApp\DatabaseConnection.cs" />
     <Compile Include="LoginApp\Login.cs">
       <SubType>Form</SubType>
     </Compile>
