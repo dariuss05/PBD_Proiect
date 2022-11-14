@@ -1,7 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 
-namespace PBD_Proiect.LoginApp
+namespace PBD_Proiect
 {
     class DatabaseConnection
     {
