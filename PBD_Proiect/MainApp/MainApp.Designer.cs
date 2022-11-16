@@ -78,14 +78,14 @@
             // studentMenuAdd
             // 
             this.studentMenuAdd.Name = "studentMenuAdd";
-            this.studentMenuAdd.Size = new System.Drawing.Size(115, 22);
+            this.studentMenuAdd.Size = new System.Drawing.Size(180, 22);
             this.studentMenuAdd.Text = "Student";
             this.studentMenuAdd.Click += new System.EventHandler(this.studentMenuAdd_Click);
             // 
             // notaMenuAdd
             // 
             this.notaMenuAdd.Name = "notaMenuAdd";
-            this.notaMenuAdd.Size = new System.Drawing.Size(115, 22);
+            this.notaMenuAdd.Size = new System.Drawing.Size(180, 22);
             this.notaMenuAdd.Text = "Notă";
             this.notaMenuAdd.Click += new System.EventHandler(this.notaMenuAdd_Click);
             // 
@@ -187,7 +187,7 @@
             // 
             this.lblTabelNote.AutoSize = true;
             this.lblTabelNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblTabelNote.Location = new System.Drawing.Point(633, 414);
+            this.lblTabelNote.Location = new System.Drawing.Point(659, 414);
             this.lblTabelNote.Name = "lblTabelNote";
             this.lblTabelNote.Size = new System.Drawing.Size(84, 18);
             this.lblTabelNote.TabIndex = 3;
@@ -197,7 +197,7 @@
             // 
             this.lblStudenti.AutoSize = true;
             this.lblStudenti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblStudenti.Location = new System.Drawing.Point(633, 38);
+            this.lblStudenti.Location = new System.Drawing.Point(649, 38);
             this.lblStudenti.Name = "lblStudenti";
             this.lblStudenti.Size = new System.Drawing.Size(105, 18);
             this.lblStudenti.TabIndex = 4;

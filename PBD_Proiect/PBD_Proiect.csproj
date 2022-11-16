@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Displays\DisplayPrezentariExamenStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,7 +83,6 @@
     <Compile Include="Displays\DisplayRestantieri.Designer.cs">
       <DependentUpon>DisplayRestantieri.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginApp\DatabaseConnection.cs" />
     <Compile Include="LoginApp\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +109,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Displays\DisplayPrezentariExamenStudent.resx">
+      <DependentUpon>DisplayPrezentariExamenStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\DisplayPromovabilitateMaterie.resx">
+      <DependentUpon>DisplayPromovabilitateMaterie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\DisplayRaportDetaliatStudent.resx">
+      <DependentUpon>DisplayRaportDetaliatStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\DisplayRaportStudent.resx">
+      <DependentUpon>DisplayRaportStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Displays\DisplayRestanteConsecutive.resx">
+      <DependentUpon>DisplayRestanteConsecutive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Displays\DisplayRestantieri.resx">
       <DependentUpon>DisplayRestantieri.cs</DependentUpon>
     </EmbeddedResource>

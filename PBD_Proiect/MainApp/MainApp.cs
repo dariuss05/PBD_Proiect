@@ -39,7 +39,7 @@ namespace PBD_Proiect
             }
             catch (SqlException exception)
             {
-                MessageBox.Show("EROARE", exception.Message);
+                MessageBox.Show(exception.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
