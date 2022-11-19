@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(524, 265);
+            this.ClientSize = new System.Drawing.Size(529, 284);
             this.Controls.Add(this.btnSignUP);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
