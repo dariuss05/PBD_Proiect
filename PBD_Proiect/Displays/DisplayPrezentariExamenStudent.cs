@@ -19,14 +19,17 @@ namespace PBD_Proiect.Displays
                 SqlConnection sqlConnection = new SqlConnection(DatabaseConnection.databaseConnectionString);
                 sqlConnection.Open();
 
-                /* Mai trebuie pusa rata de promovabilitate in tabel */
-                string selectQuery = "SELECT student.nume, student.prenume, note.nr_prezentare FROM [dbo].[student] INNER JOIN [dbo].[note] ON student.nrLegim = note.nrLegim WHERE note.nr_prezentare IN (SELECT MAX(note.nr_prezentare) FROM [dbo].[note])";
+                
+                string selectQuery = "SELECT TOP 1 student.nume, student.prenume, SUM(note.nr_prezentare) AS nrPrezentare FROM [dbo].[student] INNER JOIN [dbo].[note] ON student.nrLegim = note.nrLegim GROUP BY student.nume, student.prenume, note.nrLegim ORDER BY nrPrezentare DESC";
 
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, DatabaseConnection.databaseConnectionString);
                 DataSet dataSet = new DataSet();
                 dataAdapter.Fill(dataSet, "student");
                 tabelStudentNrPrezentari.DataSource = dataSet.Tables["student"].DefaultView;
+                tabelStudentNrPrezentari.Columns.Add("rataPromovabilitate", "Rata promovabilitate");
+                tabelStudentNrPrezentari.Rows[0].Cells[3].Value = ((double.Parse(tabelStudentNrPrezentari.Rows[0].Cells[2].Value.ToString()) / 6) * 100).ToString("0.##") + "%";
+
             }
             catch (SqlException message)
             {
