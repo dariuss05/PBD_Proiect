@@ -50,50 +50,51 @@ namespace PBD_Proiect
 
         private void studentMenuAdd_Click(object sender, EventArgs e)
         {
-            var addStudentForm = new AddStudent();
-            addStudentForm.Show();
+            this.Hide();
+            AddStudent addStudent = new AddStudent();
+            addStudent.ShowDialog();
         }
 
         private void notaMenuAdd_Click(object sender, EventArgs e)
         {
             var addNotaForm = new AddNote();
-            addNotaForm.Show();
+            addNotaForm.ShowDialog();
         }
 
         private void restantieriMenuDisplay_Click(object sender, EventArgs e)
         {
             var displayRestantieriForm = new DisplayRestantieri();
-            displayRestantieriForm.Show();
+            displayRestantieriForm.ShowDialog();
         }
 
         private void raportStudentMenuAfisare_Click(object sender, EventArgs e)
         {
             var displayRaportStudent = new DisplayRaportStudent();
-            displayRaportStudent.Show();
+            displayRaportStudent.ShowDialog();
         }
 
         private void raportDetaliatMenuAfisare_Click(object sender, EventArgs e)
         {
             var displayRaportDetaliatStudent = new DisplayRaportDetaliatStudent();
-            displayRaportDetaliatStudent.Show();
+            displayRaportDetaliatStudent.ShowDialog();
         }
 
         private void promovabilitateStudentMenuAfisare_Click(object sender, EventArgs e)
         {
             var displayPromovabilitateMaterie = new DisplayPromovabilitateMaterie();
-            displayPromovabilitateMaterie.Show();
+            displayPromovabilitateMaterie.ShowDialog();
         }
 
         private void restanteConsecutiveMenuAfisare_Click(object sender, EventArgs e)
         {
             var displayRestanteConsecutive = new DisplayRestanteConsecutive();
-            displayRestanteConsecutive.Show();
+            displayRestanteConsecutive.ShowDialog();
         }
 
         private void prezentariExamenMenuAfisare_Click(object sender, EventArgs e)
         {
             var displayPrezentariExamen = new DisplayPrezentariExamenStudent();
-            displayPrezentariExamen.Show();
+            displayPrezentariExamen.ShowDialog();
         }
 
     }

@@ -56,13 +56,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.restantieriMenuAfisare,
             this.iesireMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(169, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(212, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,20 +73,20 @@
             this.studentMenuAdd,
             this.notaMenuAdd});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.fileToolStripMenuItem.Text = "Adaugă";
             // 
             // studentMenuAdd
             // 
             this.studentMenuAdd.Name = "studentMenuAdd";
-            this.studentMenuAdd.Size = new System.Drawing.Size(180, 22);
+            this.studentMenuAdd.Size = new System.Drawing.Size(143, 26);
             this.studentMenuAdd.Text = "Student";
             this.studentMenuAdd.Click += new System.EventHandler(this.studentMenuAdd_Click);
             // 
             // notaMenuAdd
             // 
             this.notaMenuAdd.Name = "notaMenuAdd";
-            this.notaMenuAdd.Size = new System.Drawing.Size(180, 22);
+            this.notaMenuAdd.Size = new System.Drawing.Size(143, 26);
             this.notaMenuAdd.Text = "Notă";
             this.notaMenuAdd.Click += new System.EventHandler(this.notaMenuAdd_Click);
             // 
@@ -99,55 +100,55 @@
             this.restanteConsecutiveMenuAfisare,
             this.prezentariExamenMenuAfisare});
             this.restantieriMenuAfisare.Name = "restantieriMenuAfisare";
-            this.restantieriMenuAfisare.Size = new System.Drawing.Size(55, 20);
+            this.restantieriMenuAfisare.Size = new System.Drawing.Size(69, 24);
             this.restantieriMenuAfisare.Text = "Afișare";
             // 
             // restantieriMenuDisplay
             // 
             this.restantieriMenuDisplay.Name = "restantieriMenuDisplay";
-            this.restantieriMenuDisplay.Size = new System.Drawing.Size(214, 22);
+            this.restantieriMenuDisplay.Size = new System.Drawing.Size(267, 26);
             this.restantieriMenuDisplay.Text = "Restanțieri";
             this.restantieriMenuDisplay.Click += new System.EventHandler(this.restantieriMenuDisplay_Click);
             // 
             // raportStudentMenuAfisare
             // 
             this.raportStudentMenuAfisare.Name = "raportStudentMenuAfisare";
-            this.raportStudentMenuAfisare.Size = new System.Drawing.Size(214, 22);
+            this.raportStudentMenuAfisare.Size = new System.Drawing.Size(267, 26);
             this.raportStudentMenuAfisare.Text = "Raport-student";
             this.raportStudentMenuAfisare.Click += new System.EventHandler(this.raportStudentMenuAfisare_Click);
             // 
             // raportDetaliatMenuAfisare
             // 
             this.raportDetaliatMenuAfisare.Name = "raportDetaliatMenuAfisare";
-            this.raportDetaliatMenuAfisare.Size = new System.Drawing.Size(214, 22);
+            this.raportDetaliatMenuAfisare.Size = new System.Drawing.Size(267, 26);
             this.raportDetaliatMenuAfisare.Text = "Raport-detaliat student";
             this.raportDetaliatMenuAfisare.Click += new System.EventHandler(this.raportDetaliatMenuAfisare_Click);
             // 
             // promovabilitateStudentMenuAfisare
             // 
             this.promovabilitateStudentMenuAfisare.Name = "promovabilitateStudentMenuAfisare";
-            this.promovabilitateStudentMenuAfisare.Size = new System.Drawing.Size(214, 22);
+            this.promovabilitateStudentMenuAfisare.Size = new System.Drawing.Size(267, 26);
             this.promovabilitateStudentMenuAfisare.Text = "Promovabilitate materie";
             this.promovabilitateStudentMenuAfisare.Click += new System.EventHandler(this.promovabilitateStudentMenuAfisare_Click);
             // 
             // restanteConsecutiveMenuAfisare
             // 
             this.restanteConsecutiveMenuAfisare.Name = "restanteConsecutiveMenuAfisare";
-            this.restanteConsecutiveMenuAfisare.Size = new System.Drawing.Size(214, 22);
+            this.restanteConsecutiveMenuAfisare.Size = new System.Drawing.Size(267, 26);
             this.restanteConsecutiveMenuAfisare.Text = "Restanțe consecutive";
             this.restanteConsecutiveMenuAfisare.Click += new System.EventHandler(this.restanteConsecutiveMenuAfisare_Click);
             // 
             // prezentariExamenMenuAfisare
             // 
             this.prezentariExamenMenuAfisare.Name = "prezentariExamenMenuAfisare";
-            this.prezentariExamenMenuAfisare.Size = new System.Drawing.Size(214, 22);
+            this.prezentariExamenMenuAfisare.Size = new System.Drawing.Size(267, 26);
             this.prezentariExamenMenuAfisare.Text = "Prezentări examen student";
             this.prezentariExamenMenuAfisare.Click += new System.EventHandler(this.prezentariExamenMenuAfisare_Click);
             // 
             // iesireMenu
             // 
             this.iesireMenu.Name = "iesireMenu";
-            this.iesireMenu.Size = new System.Drawing.Size(46, 20);
+            this.iesireMenu.Size = new System.Drawing.Size(58, 24);
             this.iesireMenu.Text = "Ieșire";
             this.iesireMenu.Click += new System.EventHandler(this.iesireMenu_Click);
             // 
@@ -161,10 +162,12 @@
             this.tabelStudenti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelStudenti.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelStudenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelStudenti.Location = new System.Drawing.Point(22, 69);
+            this.tabelStudenti.Location = new System.Drawing.Point(29, 85);
+            this.tabelStudenti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabelStudenti.Name = "tabelStudenti";
             this.tabelStudenti.ReadOnly = true;
-            this.tabelStudenti.Size = new System.Drawing.Size(1369, 333);
+            this.tabelStudenti.RowHeadersWidth = 51;
+            this.tabelStudenti.Size = new System.Drawing.Size(1825, 410);
             this.tabelStudenti.TabIndex = 1;
             // 
             // tabelNote
@@ -177,19 +180,22 @@
             this.tabelNote.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelNote.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelNote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelNote.Location = new System.Drawing.Point(22, 438);
+            this.tabelNote.Location = new System.Drawing.Point(29, 539);
+            this.tabelNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabelNote.Name = "tabelNote";
             this.tabelNote.ReadOnly = true;
-            this.tabelNote.Size = new System.Drawing.Size(1369, 331);
+            this.tabelNote.RowHeadersWidth = 51;
+            this.tabelNote.Size = new System.Drawing.Size(1825, 407);
             this.tabelNote.TabIndex = 2;
             // 
             // lblTabelNote
             // 
             this.lblTabelNote.AutoSize = true;
             this.lblTabelNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblTabelNote.Location = new System.Drawing.Point(659, 414);
+            this.lblTabelNote.Location = new System.Drawing.Point(879, 510);
+            this.lblTabelNote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTabelNote.Name = "lblTabelNote";
-            this.lblTabelNote.Size = new System.Drawing.Size(84, 18);
+            this.lblTabelNote.Size = new System.Drawing.Size(108, 24);
             this.lblTabelNote.TabIndex = 3;
             this.lblTabelNote.Text = "Tabel Note:";
             // 
@@ -197,25 +203,30 @@
             // 
             this.lblStudenti.AutoSize = true;
             this.lblStudenti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblStudenti.Location = new System.Drawing.Point(649, 38);
+            this.lblStudenti.Location = new System.Drawing.Point(865, 47);
+            this.lblStudenti.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudenti.Name = "lblStudenti";
-            this.lblStudenti.Size = new System.Drawing.Size(105, 18);
+            this.lblStudenti.Size = new System.Drawing.Size(136, 24);
             this.lblStudenti.TabIndex = 4;
             this.lblStudenti.Text = "Tabel Studenti:";
             // 
             // MainApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1403, 781);
+            this.ClientSize = new System.Drawing.Size(1871, 961);
             this.Controls.Add(this.lblStudenti);
             this.Controls.Add(this.lblTabelNote);
             this.Controls.Add(this.tabelNote);
             this.Controls.Add(this.tabelStudenti);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainApp";
             this.Load += new System.EventHandler(this.MainApp_Load);
             this.menuStrip1.ResumeLayout(false);
