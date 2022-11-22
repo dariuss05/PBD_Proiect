@@ -63,7 +63,7 @@
             this.iesireMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(212, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(210, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -156,43 +156,37 @@
             // 
             this.tabelStudenti.AllowUserToAddRows = false;
             this.tabelStudenti.AllowUserToDeleteRows = false;
-            this.tabelStudenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabelStudenti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelStudenti.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelStudenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelStudenti.Location = new System.Drawing.Point(29, 85);
-            this.tabelStudenti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabelStudenti.Location = new System.Drawing.Point(39, 76);
+            this.tabelStudenti.Margin = new System.Windows.Forms.Padding(4);
             this.tabelStudenti.Name = "tabelStudenti";
             this.tabelStudenti.ReadOnly = true;
             this.tabelStudenti.RowHeadersWidth = 51;
-            this.tabelStudenti.Size = new System.Drawing.Size(1825, 410);
+            this.tabelStudenti.Size = new System.Drawing.Size(1145, 307);
             this.tabelStudenti.TabIndex = 1;
             // 
             // tabelNote
             // 
             this.tabelNote.AllowUserToAddRows = false;
             this.tabelNote.AllowUserToDeleteRows = false;
-            this.tabelNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabelNote.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelNote.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelNote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelNote.Location = new System.Drawing.Point(29, 539);
-            this.tabelNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabelNote.Location = new System.Drawing.Point(42, 450);
+            this.tabelNote.Margin = new System.Windows.Forms.Padding(4);
             this.tabelNote.Name = "tabelNote";
             this.tabelNote.ReadOnly = true;
             this.tabelNote.RowHeadersWidth = 51;
-            this.tabelNote.Size = new System.Drawing.Size(1825, 407);
+            this.tabelNote.Size = new System.Drawing.Size(1142, 325);
             this.tabelNote.TabIndex = 2;
             // 
             // lblTabelNote
             // 
             this.lblTabelNote.AutoSize = true;
             this.lblTabelNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblTabelNote.Location = new System.Drawing.Point(879, 510);
+            this.lblTabelNote.Location = new System.Drawing.Point(566, 422);
             this.lblTabelNote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTabelNote.Name = "lblTabelNote";
             this.lblTabelNote.Size = new System.Drawing.Size(108, 24);
@@ -203,7 +197,7 @@
             // 
             this.lblStudenti.AutoSize = true;
             this.lblStudenti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.lblStudenti.Location = new System.Drawing.Point(865, 47);
+            this.lblStudenti.Location = new System.Drawing.Point(555, 48);
             this.lblStudenti.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudenti.Name = "lblStudenti";
             this.lblStudenti.Size = new System.Drawing.Size(136, 24);
@@ -215,14 +209,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1871, 961);
+            this.ClientSize = new System.Drawing.Size(1228, 961);
             this.Controls.Add(this.lblStudenti);
             this.Controls.Add(this.lblTabelNote);
             this.Controls.Add(this.tabelNote);
             this.Controls.Add(this.tabelStudenti);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainApp";

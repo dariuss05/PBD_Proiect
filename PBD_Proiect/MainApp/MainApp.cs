@@ -57,8 +57,9 @@ namespace PBD_Proiect
 
         private void notaMenuAdd_Click(object sender, EventArgs e)
         {
-            var addNotaForm = new AddNote();
-            addNotaForm.ShowDialog();
+            this.Hide();
+            AddNote addNote = new AddNote();
+            addNote.ShowDialog();
         }
 
         private void restantieriMenuDisplay_Click(object sender, EventArgs e)
