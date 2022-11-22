@@ -42,18 +42,22 @@
             this.tabelStudentNrPrezentari.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelStudentNrPrezentari.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelStudentNrPrezentari.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelStudentNrPrezentari.Location = new System.Drawing.Point(13, 26);
+            this.tabelStudentNrPrezentari.Location = new System.Drawing.Point(17, 32);
+            this.tabelStudentNrPrezentari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabelStudentNrPrezentari.Name = "tabelStudentNrPrezentari";
             this.tabelStudentNrPrezentari.ReadOnly = true;
-            this.tabelStudentNrPrezentari.Size = new System.Drawing.Size(890, 429);
+            this.tabelStudentNrPrezentari.RowHeadersWidth = 51;
+            this.tabelStudentNrPrezentari.Size = new System.Drawing.Size(1187, 528);
             this.tabelStudentNrPrezentari.TabIndex = 0;
             // 
             // DisplayPrezentariExamenStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 467);
+            this.ClientSize = new System.Drawing.Size(1220, 575);
             this.Controls.Add(this.tabelStudentNrPrezentari);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DisplayPrezentariExamenStudent";
             this.Text = "DisplayPrezentariExamenStudent";
             this.Load += new System.EventHandler(this.DisplayPrezentariExamenStudent_Load);

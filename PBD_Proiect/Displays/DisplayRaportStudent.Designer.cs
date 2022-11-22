@@ -36,9 +36,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(460, 13);
+            this.label1.Location = new System.Drawing.Point(613, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(102, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Raport Studenti:";
             // 
@@ -52,18 +53,22 @@
             this.tabelRaportStudenti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelRaportStudenti.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelRaportStudenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelRaportStudenti.Location = new System.Drawing.Point(13, 42);
+            this.tabelRaportStudenti.Location = new System.Drawing.Point(17, 52);
+            this.tabelRaportStudenti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabelRaportStudenti.Name = "tabelRaportStudenti";
-            this.tabelRaportStudenti.Size = new System.Drawing.Size(980, 489);
+            this.tabelRaportStudenti.RowHeadersWidth = 51;
+            this.tabelRaportStudenti.Size = new System.Drawing.Size(1307, 602);
             this.tabelRaportStudenti.TabIndex = 1;
             // 
             // DisplayRaportStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 543);
+            this.ClientSize = new System.Drawing.Size(1340, 668);
             this.Controls.Add(this.tabelRaportStudenti);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DisplayRaportStudent";
             this.Text = "DisplayRaportStudent";
             this.Load += new System.EventHandler(this.DisplayRaportStudent_Load);

@@ -50,7 +50,7 @@
             this.listaDetaliataStudent.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.listaDetaliataStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaDetaliataStudent.Location = new System.Drawing.Point(56, 81);
-            this.listaDetaliataStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listaDetaliataStudent.Margin = new System.Windows.Forms.Padding(4);
             this.listaDetaliataStudent.Name = "listaDetaliataStudent";
             this.listaDetaliataStudent.ReadOnly = true;
             this.listaDetaliataStudent.RowHeadersWidth = 51;
@@ -81,7 +81,7 @@
             // 
             this.btnNume.AutoSize = true;
             this.btnNume.Location = new System.Drawing.Point(1177, 299);
-            this.btnNume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNume.Margin = new System.Windows.Forms.Padding(4);
             this.btnNume.Name = "btnNume";
             this.btnNume.Size = new System.Drawing.Size(64, 20);
             this.btnNume.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.btnPrenume.AutoSize = true;
             this.btnPrenume.Location = new System.Drawing.Point(1177, 327);
-            this.btnPrenume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrenume.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrenume.Name = "btnPrenume";
             this.btnPrenume.Size = new System.Drawing.Size(82, 20);
             this.btnPrenume.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             this.btnAnStudiu.AutoSize = true;
             this.btnAnStudiu.Location = new System.Drawing.Point(1177, 356);
-            this.btnAnStudiu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnStudiu.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnStudiu.Name = "btnAnStudiu";
             this.btnAnStudiu.Size = new System.Drawing.Size(88, 20);
             this.btnAnStudiu.TabIndex = 6;
@@ -120,7 +120,7 @@
             // 
             this.btnDisciplina.AutoSize = true;
             this.btnDisciplina.Location = new System.Drawing.Point(1177, 384);
-            this.btnDisciplina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDisciplina.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisciplina.Name = "btnDisciplina";
             this.btnDisciplina.Size = new System.Drawing.Size(87, 20);
             this.btnDisciplina.TabIndex = 7;
@@ -141,9 +141,10 @@
             this.Controls.Add(this.lblOrdine);
             this.Controls.Add(this.lblTitlu);
             this.Controls.Add(this.listaDetaliataStudent);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DisplayRaportDetaliatStudent";
-            this.Text = "DisplayRaportDetaliatStudent";         
+            this.Text = "DisplayRaportDetaliatStudent";
             ((System.ComponentModel.ISupportInitialize)(this.listaDetaliataStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

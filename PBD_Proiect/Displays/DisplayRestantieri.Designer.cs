@@ -36,9 +36,10 @@
             // lblRestantieri
             // 
             this.lblRestantieri.AutoSize = true;
-            this.lblRestantieri.Location = new System.Drawing.Point(12, 9);
+            this.lblRestantieri.Location = new System.Drawing.Point(16, 11);
+            this.lblRestantieri.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRestantieri.Name = "lblRestantieri";
-            this.lblRestantieri.Size = new System.Drawing.Size(99, 13);
+            this.lblRestantieri.Size = new System.Drawing.Size(122, 16);
             this.lblRestantieri.TabIndex = 0;
             this.lblRestantieri.Text = "Studenții restanțieri:";
             // 
@@ -53,18 +54,22 @@
             this.tabelRestantieri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tabelRestantieri.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelRestantieri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelRestantieri.Location = new System.Drawing.Point(15, 38);
+            this.tabelRestantieri.Location = new System.Drawing.Point(20, 47);
+            this.tabelRestantieri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabelRestantieri.Name = "tabelRestantieri";
-            this.tabelRestantieri.Size = new System.Drawing.Size(1012, 441);
+            this.tabelRestantieri.RowHeadersWidth = 51;
+            this.tabelRestantieri.Size = new System.Drawing.Size(1349, 543);
             this.tabelRestantieri.TabIndex = 1;
             // 
             // DisplayRestantieri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 491);
+            this.ClientSize = new System.Drawing.Size(1385, 604);
             this.Controls.Add(this.tabelRestantieri);
             this.Controls.Add(this.lblRestantieri);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DisplayRestantieri";
             this.Text = "DisplayRestantieri";
             this.Load += new System.EventHandler(this.DisplayRestantieri_Load);
