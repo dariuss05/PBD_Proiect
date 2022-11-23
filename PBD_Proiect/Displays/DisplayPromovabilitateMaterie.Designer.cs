@@ -74,8 +74,11 @@
             this.Controls.Add(this.listaMaterii);
             this.Controls.Add(this.tabelPromovabilitate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DisplayPromovabilitateMaterie";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DisplayPromovabilitateMaterie";
             this.Load += new System.EventHandler(this.DisplayPromovabilitateMaterie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabelPromovabilitate)).EndInit();

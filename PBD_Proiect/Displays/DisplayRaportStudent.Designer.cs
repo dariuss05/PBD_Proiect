@@ -54,7 +54,7 @@
             this.tabelRaportStudenti.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelRaportStudenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelRaportStudenti.Location = new System.Drawing.Point(17, 52);
-            this.tabelRaportStudenti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabelRaportStudenti.Margin = new System.Windows.Forms.Padding(4);
             this.tabelRaportStudenti.Name = "tabelRaportStudenti";
             this.tabelRaportStudenti.RowHeadersWidth = 51;
             this.tabelRaportStudenti.Size = new System.Drawing.Size(1307, 602);
@@ -68,8 +68,11 @@
             this.Controls.Add(this.tabelRaportStudenti);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DisplayRaportStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DisplayRaportStudent";
             this.Load += new System.EventHandler(this.DisplayRaportStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabelRaportStudenti)).EndInit();

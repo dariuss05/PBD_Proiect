@@ -143,7 +143,10 @@
             this.Controls.Add(this.listaDetaliataStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DisplayRaportDetaliatStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DisplayRaportDetaliatStudent";
             ((System.ComponentModel.ISupportInitialize)(this.listaDetaliataStudent)).EndInit();
             this.ResumeLayout(false);

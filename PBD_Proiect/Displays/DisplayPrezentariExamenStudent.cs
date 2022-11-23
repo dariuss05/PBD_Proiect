@@ -16,20 +16,35 @@ namespace PBD_Proiect.Displays
         {
             try
             {
+
+                tabelStudentNrPrezentari.Rows.Clear();
+                tabelStudentNrPrezentari.Columns.Clear();
                 SqlConnection sqlConnection = new SqlConnection(DatabaseConnection.databaseConnectionString);
                 sqlConnection.Open();
 
-                
-                string selectQuery = "SELECT TOP 1 student.nume, student.prenume, SUM(note.nr_prezentare) AS nrPrezentare FROM [dbo].[student] INNER JOIN [dbo].[note] ON student.nrLegim = note.nrLegim GROUP BY student.nume, student.prenume, note.nrLegim ORDER BY nrPrezentare DESC";
+                string selectQuery = "SELECT TOP 1 student.nume, student.prenume, SUM(note.nr_prezentare)" +
+                    " AS nrPrezentare, COUNT(DISTINCT (case when note.nota_obtinuta >= 5 then disciplina end))" +
+                    " as disciplina from [dbo].[student] INNER JOIN [dbo].[note] ON" +
+                    " student.nrLegim = note.nrLegim " +
+                    "GROUP BY student.nume, student.prenume, note.nrLegim ORDER BY nrPrezentare DESC";
 
+                tabelStudentNrPrezentari.Columns.Add("nume_student", "Nume student");
+                tabelStudentNrPrezentari.Columns.Add("prenume_student", "Prenume student");
+                tabelStudentNrPrezentari.Columns.Add("numar_prezentari", "Numar de prezentari");
+                tabelStudentNrPrezentari.Columns.Add("numar_discipline", "Numar de discipline");
+                tabelStudentNrPrezentari.Columns.Add("rata_prom", "Rata de promovabilitate");
 
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, DatabaseConnection.databaseConnectionString);
-                DataSet dataSet = new DataSet();
-                dataAdapter.Fill(dataSet, "student");
-                tabelStudentNrPrezentari.DataSource = dataSet.Tables["student"].DefaultView;
-                tabelStudentNrPrezentari.Columns.Add("rataPromovabilitate", "Rata promovabilitate");
-                tabelStudentNrPrezentari.Rows[0].Cells[3].Value = ((double.Parse(tabelStudentNrPrezentari.Rows[0].Cells[2].Value.ToString()) / 6) * 100).ToString("0.##") + "%";
-
+                using (SqlCommand cautare_student = new SqlCommand(selectQuery, sqlConnection))
+                {
+                    using (SqlDataReader reader = cautare_student.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            var procent = (Convert.ToDouble(reader[3]) / Convert.ToDouble(reader[2])) * 100;
+                            tabelStudentNrPrezentari.Rows.Add(reader[0], reader[1], reader[2], reader[3], procent.ToString("0.##") + "%");
+                        }
+                    }
+                }
             }
             catch (SqlException message)
             {

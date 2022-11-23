@@ -55,7 +55,7 @@
             this.tabelRestantieri.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.tabelRestantieri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelRestantieri.Location = new System.Drawing.Point(20, 47);
-            this.tabelRestantieri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabelRestantieri.Margin = new System.Windows.Forms.Padding(4);
             this.tabelRestantieri.Name = "tabelRestantieri";
             this.tabelRestantieri.RowHeadersWidth = 51;
             this.tabelRestantieri.Size = new System.Drawing.Size(1349, 543);
@@ -69,8 +69,11 @@
             this.Controls.Add(this.tabelRestantieri);
             this.Controls.Add(this.lblRestantieri);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DisplayRestantieri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DisplayRestantieri";
             this.Load += new System.EventHandler(this.DisplayRestantieri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabelRestantieri)).EndInit();
