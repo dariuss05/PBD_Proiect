@@ -34,7 +34,7 @@ namespace PBD_Proiect.Displays
                 foreach (DataGridViewRow dgvRow in tabelRestanteCons.Rows)
                 {
                     if (dgvRow.Cells[4].FormattedValue.ToString() == "3")
-                        dgvRow.Cells[4].Value = "1, 2";
+                        dgvRow.Cells[4].Value = "(1, 2)";
                     if (dgvRow.Cells[4].FormattedValue.ToString() == "5")
                         dgvRow.Cells[4].Value = "(2, 3)";
                     if (dgvRow.Cells[4].FormattedValue.ToString() == "6")
