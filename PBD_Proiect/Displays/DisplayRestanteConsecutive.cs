@@ -19,26 +19,27 @@ namespace PBD_Proiect.Displays
                 SqlConnection sqlConnection = new SqlConnection(DatabaseConnection.databaseConnectionString);
                 sqlConnection.Open();
 
-                string selectQuery = "SELECT student.nrLegim, student.nume, student.prenume, note.nota_obtinuta, SUM(note.an_studiu) as sumaAn FROM [dbo].[student] INNER JOIN [dbo].[note] on student.nrLegim = note.nrLegim group by student.nrLegim, student.nume, student.prenume, note.nota_obtinuta HAVING (note.nota_obtinuta < 5 AND (SUM(note.an_studiu) = 3) OR SUM(note.an_studiu) = 5 OR SUM(note.an_studiu) = 6)";
-
-                string selectQuery2 = "SELECT student.nrLegim, note.an_studiu FROM [dbo].[student] INNER JOIN [dbo].[note] on student.nrLegim = note.nrLegim WHERE note.nota_obtinuta < 5 GROUP BY student.nrLegim, note.an_studiu ORDER BY student.nrLegim";
+                string selectQuery = "SELECT student.nrLegim AS 'Numar Legitimatie', student.nume AS 'Nume', student.prenume AS 'Prenume', note.nota_obtinuta AS 'Nota Obtinuta', SUM(note.an_studiu) as 'Anii in care s-au obtinut notele' FROM [dbo].[student] INNER JOIN [dbo].[note] on student.nrLegim = note.nrLegim group by student.nrLegim, student.nume, student.prenume, note.nota_obtinuta HAVING (note.nota_obtinuta < 5 AND (SUM(note.an_studiu) = 3) OR SUM(note.an_studiu) = 5 OR SUM(note.an_studiu) = 6)";
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(selectQuery, DatabaseConnection.databaseConnectionString);
                 DataSet dataSet = new DataSet();
                 dataAdapter.Fill(dataSet, "student");
                 tabelRestanteCons.DataSource = dataSet.Tables["student"].DefaultView;
-                for (int i = 0; i < tabelRestanteCons.Rows.Count; i++)
-                {
-                    if (tabelRestanteCons.Rows[i].Cells["sumaAn"].Value == (object)3)
-                    {
-                        tabelRestanteCons.Rows[i].Cells["sumaAn"].Value +=(tabelRestanteCons.Rows[i].Cells["sumaAn"].Value.ToString() + " (1, 2)");
-                    }
-                }
+                DataSet dataSet_cloned = dataSet.Clone();
+                dataSet_cloned.Tables[0].Columns[4].DataType = typeof(string);
 
-                SqlDataAdapter dataAdapter2 = new SqlDataAdapter(selectQuery2, DatabaseConnection.databaseConnectionString);
-                DataSet dataSet2 = new DataSet();
-                dataAdapter2.Fill(dataSet2, "note");
-                tabelAnStudiu.DataSource = dataSet2.Tables["note"].DefaultView;
+                dataAdapter.Fill(dataSet_cloned, "student");
+                tabelRestanteCons.DataSource = dataSet_cloned.Tables["student"].DefaultView;
+
+                foreach (DataGridViewRow dgvRow in tabelRestanteCons.Rows)
+                {
+                    if (dgvRow.Cells[4].FormattedValue.ToString() == "3")
+                        dgvRow.Cells[4].Value = "1, 2";
+                    if (dgvRow.Cells[4].FormattedValue.ToString() == "5")
+                        dgvRow.Cells[4].Value = "(2, 3)";
+                    if (dgvRow.Cells[4].FormattedValue.ToString() == "6")
+                        dgvRow.Cells[4].Value = "(1, 2, 3)";
+                }
 
             }
             catch (SqlException message)
