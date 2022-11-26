@@ -25,6 +25,7 @@ namespace PBD_Proiect.Displays
                 DataSet dataSet = new DataSet();
                 dataAdapter.Fill(dataSet, "student");
                 listaDetaliataStudent.DataSource = dataSet.Tables["student"].DefaultView;
+
             }
             catch (SqlException message)
             {
