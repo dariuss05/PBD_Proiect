@@ -161,5 +161,9 @@
   <ItemGroup>
     <None Include="Config\App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Procedures\calculPromovabilitate.sql" />
+    <Content Include="Triggers\updateAVG.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
